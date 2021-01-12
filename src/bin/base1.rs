@@ -13,7 +13,7 @@ fn main() -> io::Result<()> {
 		stdin.read_to_string(&mut s)?;
 
 		if args[1] == "encode" {
-			print!("{}", base1::encode(&s.as_bytes().to_vec()));
+			print!("{}", base1::encode(&s.trim().as_bytes().to_vec()));
 		} else {
 			stdout.write(&base1::decode(&s))?;
 		}
