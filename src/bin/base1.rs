@@ -15,7 +15,7 @@ fn main() -> io::Result<()> {
 		if args[1] == "encode" {
 			print!("{}", base1::encode(&s.trim().as_bytes().to_vec()));
 		} else {
-			stdout.write(&base1::decode(&s))?;
+			stdout.write(&base1::decode(&s.trim().to_string()))?;
 		}
 	}
 	Ok(())
